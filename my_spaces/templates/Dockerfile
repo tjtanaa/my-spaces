@@ -3,6 +3,7 @@ FROM nvcr.io/nvidia/pytorch:22.10-py3
 ENV DEBIAN_FRONTEND noninteractive
 # gradio and streamlit default ports
 EXPOSE 7860 8501
+# EXPOSE 7500-8999
 RUN  apt update && apt install -y git-lfs ffmpeg libsm6 libxext6 cmake libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 RUN git lfs install
